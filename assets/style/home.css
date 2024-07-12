@@ -1,5 +1,9 @@
 /* services section */
 
+.services {
+  margin-bottom: 21.8rem;
+}
+
 .services_block {
   display: flex;
   align-items: center;
@@ -72,6 +76,9 @@
 /* media query for services section */
 
 @media screen and (max-width: 992px) {
+  .services {
+    margin-bottom: 15.7rem;
+  }
   .services_block {
     gap: 2rem;
   }
@@ -86,6 +93,9 @@
 }
 
 @media screen and (max-width: 766px) {
+  .services {
+    margin-bottom: 14rem;
+  }
   .services_block {
     flex-wrap: inherit;
     overflow-x: scroll;
