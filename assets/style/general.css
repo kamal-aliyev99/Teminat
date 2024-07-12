@@ -7,6 +7,9 @@
   --color-white: #fff;
   --color-lightestgrey: #f9f6f6;
   --color-mobile-nav: rgba(245, 240, 240, 0.98);
+  --color-white-light-opacity: rgba(255, 255, 255, 0.5);
+  --color-grey: #B6B6B7;
+  --gradient: linear-gradient(103deg, #212223 18.29%, #ff6000 403.34%);
 }
 
 .container {
@@ -50,35 +53,151 @@ header nav a.logo img {
   height: 2.5rem;
 }
 
-header nav ul.nav-menu {
+header nav ul.nav_menu {
   display: flex;
   gap: 4.3rem;
 }
 
-header nav ul.nav-menu a {
+header nav ul.nav_menu a {
   font-size: 2rem;
 }
 
-header nav.mobile-nav {
+header nav.mobile_nav {
   transition: 0.3s ease;
   opacity: 0;
   visibility: 0;
   display: none;
 }
 
-header nav.active-mobile-nav {
+header nav.active_mobile_nav {
   opacity: 1;
   visibility: 1;
   display: block;
 }
 
-header nav .open-mobile-nav {
+header nav .open_mobile_nav {
   opacity: 0;
   visibility: 0;
   transition: 0.3s ease;
 }
 
 /*header css ended*/
+
+/*footer css started*/
+footer {
+  background: var(--gradient);
+  padding-top: 4.3rem;
+}
+
+footer .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer_content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+footer .footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 2.7rem;
+}
+
+footer .footer_subscribe h2 {
+  font-size: 3.2rem;
+  color: var(--color-white);
+  font-weight: 400;
+}
+
+footer .footer_subscribe p {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+footer .footer_subscribe .input_box {
+  display: flex;
+  gap: 2.4rem;
+}
+
+footer .footer_subscribe .input_box input {
+  padding: 1.3rem 0 1.3rem 1.3rem;
+  width: 30rem;
+  max-width: 30rem;
+  border: 1px solid var(--color-white-light-opacity);
+  border-radius: 0.8rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  font-size: 1.4rem;
+}
+
+footer .footer_subscribe .input_box button {
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  padding: 1.3rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+
+footer .footer_nav {
+  display: flex;
+  gap: 3rem;
+}
+
+footer .footer_nav ul{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .footer_nav ul li a {
+  opacity: 0.67;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  font-weight: 400;
+}
+
+footer .footer_nav ul li .nav_heading{
+  opacity: 1;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--color-white);
+}
+
+footer .footer_nav ul .footer_social_links{
+  display: flex;
+  flex-direction: row;
+  gap: 2.6rem;
+  justify-content: center;
+}
+
+footer .footer_nav ul .footer_social_links button{
+  width: 1.9rem;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 1px solid var(--color-grey);
+  color: var(--color-grey);
+}
+
+footer .footer_map img{
+  border-radius: 1.5rem;
+}
+
+footer .footer_copyright{
+  border-top: 1px solid var(--color-white);
+  padding: 2.6rem 0;
+  margin-top: 5.7rem;
+}
+
+footer .footer_copyright p{
+  color: var(--color-white);
+}
+
+/*footer css ended*/
 
 /*media queries*/
 
@@ -93,30 +212,30 @@ header nav .open-mobile-nav {
     height: 2rem;
   }
 
-  header nav ul.nav-menu {
+  header nav ul.nav_menu {
     gap: 3.3rem;
   }
 
-  header nav ul.nav-menu a {
+  header nav ul.nav_menu a {
     font-size: 1.6rem;
   }
 }
 
 @media screen and (max-width: 375px) {
-  header nav .open-mobile-nav {
+  header nav .open_mobile_nav {
     opacity: 1;
     visibility: visible;
   }
 
-  header nav ul.nav-menu {
+  header nav ul.nav_menu {
     display: none;
   }
 
-  header nav.mobile-nav {
+  header nav.mobile_nav {
     margin-top: 1.5rem;
   }
 
-  header nav.mobile-nav ul.nav-menu {
+  header nav.mobile_nav ul.nav_menu {
     display: flex;
     flex-direction: column;
     gap: 4.9rem;
@@ -131,25 +250,25 @@ header nav .open-mobile-nav {
       0px 4px 8px 0px rgba(65, 62, 62, 0.1);
   }
 
-  header nav.mobile-nav ul.nav-menu a {
+  header nav.mobile_nav ul.nav_menu a {
     color: var(--color-orange);
     font-weight: 500;
   }
 
-  header nav.mobile-nav ul.nav-menu ul.social-icons {
+  header nav.mobile_nav ul.nav_menu ul.social_icons {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
 
-  header nav.mobile-nav ul.nav-menu ul.social-icons button {
+  header nav.mobile_nav ul.nav_menu ul.social_icons button {
     width: 3.8rem;
     height: 3.8rem;
     border-radius: 100%;
     background-color: var(--color-orange);
   }
 
-  header nav.mobile-nav ul.nav-menu ul.social-icons button i {
+  header nav.mobile_nav ul.nav_menu ul.social_icons button i {
     color: var(--color-white);
     font-size: 2rem;
   }
