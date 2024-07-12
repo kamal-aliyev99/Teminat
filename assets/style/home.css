@@ -11,7 +11,8 @@
 .services_item {
   background-color: var(--color-lightgrey);
   border-radius: 2.5rem;
-  flex: 1;
+  flex-grow: 39.1rem;
+  flex-basis: 35.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +36,7 @@
 
 .services_item h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, 1.19vw + 1.486rem, 3.2rem);
   font-weight: 500;
   letter-spacing: 1.25px;
 }
@@ -48,7 +49,7 @@
   justify-content: flex-start;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  line-height: 2.7rem;
+  line-height: 1rem;
 }
 
 .services_btn a {
@@ -57,7 +58,7 @@
   color: var(--color-orange);
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  line-height: 2.7rem;
+  line-height: 1rem;
   border-radius: 1.3rem;
   border: 1px solid var(--color-orange);
   transition: all 0.3s linear;
@@ -67,3 +68,32 @@
   background-color: var(--color-orange);
   color: var(--color-white);
 }
+
+/* media query for services section */
+
+@media screen and (max-width: 992px) {
+  .services_block {
+    gap: 2rem;
+  }
+  .services_item {
+    gap: 2.8rem;
+    padding-top: 3.6rem;
+    padding-bottom: 3.1rem;
+  }
+  .services_img {
+    max-width: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .services_block {
+    flex-wrap: inherit;
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+  .services_item {
+    flex-shrink: 0;
+  }
+}
+
+/* services section end */
