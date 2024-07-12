@@ -1,5 +1,12 @@
 /* general properties */
 
+:root {
+  --color-lightgrey: #f4f6f6;
+  --color-darkblue: #0f2b3d;
+  --color-orange: #ff6000;
+  --color-white: #fff;
+}
+
 .container {
   width: 90%;
   height: 100%;
