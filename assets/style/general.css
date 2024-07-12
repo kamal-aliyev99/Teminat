@@ -8,8 +8,9 @@
   --color-lightestgrey: #f9f6f6;
   --color-mobile-nav: rgba(245, 240, 240, 0.98);
   --color-white-light-opacity: rgba(255, 255, 255, 0.5);
-  --color-grey: #B6B6B7;
+  --color-grey: #b6b6b7;
   --gradient: linear-gradient(103deg, #212223 18.29%, #ff6000 403.34%);
+  --video-background: rgba(126, 86, 50, 0.42);
 }
 
 .container {
@@ -89,7 +90,7 @@ footer {
   padding-top: 4.3rem;
 }
 
-footer .container{
+footer .container {
   display: flex;
   justify-content: space-between;
 }
@@ -145,7 +146,7 @@ footer .footer_nav {
   gap: 3rem;
 }
 
-footer .footer_nav ul{
+footer .footer_nav ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -158,21 +159,21 @@ footer .footer_nav ul li a {
   font-weight: 400;
 }
 
-footer .footer_nav ul li .nav_heading{
+footer .footer_nav ul li .nav_heading {
   opacity: 1;
   font-weight: 500;
   font-size: 1.6rem;
   color: var(--color-white);
 }
 
-footer .footer_nav ul .footer_social_links{
+footer .footer_nav ul .footer_social_links {
   display: flex;
   flex-direction: row;
   gap: 2.6rem;
   justify-content: center;
 }
 
-footer .footer_nav ul .footer_social_links button{
+footer .footer_nav ul .footer_social_links button {
   width: 1.9rem;
   height: 1.9rem;
   display: flex;
@@ -183,17 +184,17 @@ footer .footer_nav ul .footer_social_links button{
   color: var(--color-grey);
 }
 
-footer .footer_map img{
+footer .footer_map img {
   border-radius: 1.5rem;
 }
 
-footer .footer_copyright{
+footer .footer_copyright {
   border-top: 1px solid var(--color-white);
   padding: 2.6rem 0;
   margin-top: 5.7rem;
 }
 
-footer .footer_copyright p{
+footer .footer_copyright p {
   color: var(--color-white);
 }
 
@@ -273,3 +274,55 @@ footer .footer_copyright p{
     font-size: 2rem;
   }
 }
+
+/* scroll to top button */
+
+#scroll_top {
+  display: inline-block;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 5.3rem;
+  height: 5.3rem;
+  z-index: 10;
+  bottom: 1.3rem;
+  right: 1.3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  display: none;
+  padding: 0.8rem 0.8rem 0 0.9rem;
+  transition: all 0.3s linear;
+}
+
+#scroll_top img {
+  width: 3.6rem;
+  height: 3.6rem;
+  animation: fadeDown 0.3s linear;
+}
+
+#scroll_top:hover img {
+  animation: fadeUp 0.3s linear;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* scroll to top button end*/
