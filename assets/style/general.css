@@ -24,15 +24,17 @@
 /*header css started*/
 
 header {
-  padding: 3rem 0;
+  padding-top: 3rem;
+  margin-bottom: 13.3rem;
 }
 
 header nav:nth-child(1) {
-  max-width: 91rem;
+  max-width: 91.4rem;
   height: 7.3rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  gap: clamp(3rem, 1.488vw + 2.157rem, 4.3rem);
   justify-content: space-between;
   background-color: var(--color-lightestgrey);
   padding: 3.2rem;
@@ -61,7 +63,7 @@ header nav ul.nav_menu {
 }
 
 header nav ul.nav_menu a {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 0.595vw + 1.143rem, 2rem);
 }
 
 header nav.mobile_nav {
@@ -78,8 +80,9 @@ header nav.active_mobile_nav {
 }
 
 header nav .open_mobile_nav {
-  opacity: 0;
-  visibility: 0;
+  /* opacity: 0;
+  visibility: 0; */
+  display: none;
   transition: 0.3s ease;
 }
 
@@ -204,6 +207,9 @@ footer .footer_copyright p {
 /*media queries*/
 
 @media screen and (max-width: 992px) {
+  header {
+    margin-bottom: 9.8rem;
+  }
   header nav {
     gap: 3.3rem;
     max-width: 100%;
@@ -215,24 +221,20 @@ footer .footer_copyright p {
   }
 
   header nav ul.nav_menu {
-    gap: 3.3rem;
-  }
-
-  header nav ul.nav_menu a {
-    font-size: 1.6rem;
+    gap: 3.2rem;
   }
 }
 
-@media screen and (max-width: 375px) {
-  header nav .open_mobile_nav {
-    opacity: 1;
-    visibility: visible;
+@media screen and (max-width: 765px) {
+  header nav:nth-child(1) {
+    padding: 1.75rem 3.2rem;
   }
-
   header nav ul.nav_menu {
     display: none;
   }
-
+  header nav .open_mobile_nav {
+    display: inline-block;
+  }
   header nav.mobile_nav {
     margin-top: 1.5rem;
   }
@@ -273,6 +275,15 @@ footer .footer_copyright p {
   header nav.mobile_nav ul.nav_menu ul.social_icons button i {
     color: var(--color-white);
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    margin-bottom: 5.6rem;
+  }
+  header nav:nth-child(1) {
+    padding: 1.35rem 0.9rem;
   }
 }
 
