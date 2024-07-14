@@ -25,6 +25,11 @@
   line-height: 2.8rem;
   max-width: 50.8rem;
   margin-bottom: 9.1rem;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .presentation_mob_p {
@@ -385,6 +390,11 @@
   font-weight: 500;
   line-height: 3rem;
   margin-bottom: 18.4rem;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .about_btn a {

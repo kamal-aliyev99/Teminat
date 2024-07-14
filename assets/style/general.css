@@ -5,6 +5,7 @@
   --color-darkblue: #0f2b3d;
   --color-orange: #ff6000;
   --color-white: #fff;
+  --color-middle-grey: #f2eeee;
   --color-black: #201e1e;
   --color-lightestgrey: #f9f6f6;
   --color-mobile-nav: rgba(245, 240, 240, 0.98);
@@ -290,10 +291,8 @@ footer .footer_copyright p {
 /* scroll to top button */
 
 #scroll_top {
-  display: inline-block;
   position: fixed;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   overflow: hidden;
   width: 5.3rem;
   height: 5.3rem;
@@ -304,7 +303,6 @@ footer .footer_copyright p {
   cursor: pointer;
   background-color: var(--color-orange);
   border-radius: 50%;
-  display: none;
   padding: 0.8rem 0.8rem 0 0.9rem;
   transition: all 0.3s linear;
 }
