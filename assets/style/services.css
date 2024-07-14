@@ -1,0 +1,130 @@
+
+section.services{
+    display: flex;
+    gap: min(7%, 10rem);
+    align-items: stretch;
+    padding-left: 4rem;
+    margin-block: 13rem 25rem;
+}
+
+
+/* @media screen and (min-width: 769px) { */
+    aside.servicesNav{
+        width: min(100%, 48rem);
+        min-width: 22.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--gradient);
+        border-radius: 1rem;
+    }
+    
+    .servicesNav .swiper-pagination{
+        width: max-content;
+        position: static;
+        transform: unset;
+        transition: unset;
+        text-align: initial;
+        z-index: unset;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .servicesNav .swiper-pagination-bullet{
+        color: var(--color-white);
+        width: 100%;
+        height: auto;
+        border-radius: unset;
+        background: unset;
+        opacity: unset;
+        margin: unset;
+        transition: 0.3s;
+    }
+    .servicesNav .swiper-pagination-bullet-active{
+        color: var(--color-orange);
+        opacity: unset;
+        background: unset;
+    }
+/* } */
+
+
+.services_content{
+    width: 100%;
+}
+
+.services_content .swiper-slide{
+    max-width: 66.3rem;
+}
+
+.serviceCard{
+    width: min(100%, 66.3rem);
+    padding: 5rem 1.5rem 1.5rem;
+}
+
+.serviceCard__title{
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+}
+.serviceCard__img{
+    width: 80%;
+    margin-block: 4rem 6rem;
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+.serviceCard__desc,
+.serviceCard__desc *{
+    font-weight: 500;
+    line-height: 3.2rem;
+    letter-spacing: 0.16px;
+    text-align: justify;
+    color: var(--color-brown);
+}
+
+
+
+@media screen and (max-width: 992px) {
+    section.services{
+        gap: 2rem;
+        padding-left: 2rem;
+        margin-block: 12rem 7rem;
+    }
+
+    .servicesNav .swiper-pagination{
+        gap: 3rem;
+    }
+
+    .serviceCard{
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    .serviceCard__img{
+        width: 80%;
+        margin-block: 2.3rem 2.5rem;
+    }
+    .serviceCard__desc,
+    .serviceCard__desc *{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.services{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        padding-left: unset;
+        margin-block: 10rem;
+    }
+
+    .services_content{
+        background: var(--gradient);
+        color: var(--color-white);
+        border-radius: 1rem;
+        /* overflow: hidden; */
+    }
+    .serviceCard__desc,
+    .serviceCard__desc *{
+        color: var(--color-white);
+    }
+}
