@@ -1,7 +1,7 @@
 let viewportWidth = window.innerWidth;
 const servicesSection = document.querySelector(".services")
 
-window.addEventListener("resize", () => {
+function setContainer() {
     viewportWidth = window.innerWidth;
     setServiceNav();
 
@@ -10,10 +10,8 @@ window.addEventListener("resize", () => {
     } else {
         servicesSection.classList.remove("container")
     }
-       
-})
-
-
+}
+setContainer();
 
 const serviceTitles = document.querySelector(".servicesNav").dataset.titles;  /* change this with the following */
 
@@ -26,3 +24,4 @@ function setServiceNav() {
 }
 
 document.addEventListener("DOMContentLoaded", setServiceNav)
+window.addEventListener("resize", setContainer)

@@ -7,47 +7,67 @@ section.services{
     margin-block: 13rem 25rem;
 }
 
+aside.servicesNav{
+    width: min(100%, 48rem);
+    min-width: 22.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient);
+    border-radius: 1rem;
+}
 
-/* @media screen and (min-width: 769px) { */
-    aside.servicesNav{
-        width: min(100%, 48rem);
-        min-width: 22.6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: var(--gradient);
-        border-radius: 1rem;
-    }
-    
-    .servicesNav .swiper-pagination{
-        width: max-content;
-        position: static;
-        transform: unset;
-        transition: unset;
-        text-align: initial;
-        z-index: unset;
-    
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-    }
-    .servicesNav .swiper-pagination-bullet{
-        color: var(--color-white);
-        width: 100%;
-        height: auto;
-        border-radius: unset;
-        background: unset;
-        opacity: unset;
-        margin: unset;
-        transition: 0.3s;
-    }
-    .servicesNav .swiper-pagination-bullet-active{
-        color: var(--color-orange);
-        opacity: unset;
-        background: unset;
-    }
-/* } */
+.servicesNav .swiper-button-prev,
+.servicesNav .swiper-button-next{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    opacity: unset;
+    position: static;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    margin-top: unset;
+    z-index: unset;
+    color: var(--color-black);
+}
+.servicesNav .swiper-button-prev::after,
+.servicesNav .swiper-button-next::after{
+    content: unset;
+}
+.servicesNav .swiper-button-disabled{
+    color: var(--color-grey);
+}
 
+.servicesNav .swiper-pagination{
+    width: max-content;
+    position: static;
+    transform: unset;
+    transition: unset;
+    text-align: initial;
+    z-index: unset;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.servicesNav .swiper-pagination-bullet{
+    color: var(--color-white);
+    width: 100%;
+    height: auto;
+    border-radius: unset;
+    background: unset;
+    opacity: unset;
+    margin: unset;
+    transition: 0.3s;
+}
+.servicesNav .swiper-pagination-bullet-active{
+    color: var(--color-orange);
+    opacity: unset;
+    background: unset;
+}
 
 .services_content{
     width: 100%;
@@ -82,7 +102,6 @@ section.services{
 }
 
 
-
 @media screen and (max-width: 992px) {
     section.services{
         gap: 2rem;
@@ -98,7 +117,6 @@ section.services{
         padding: 2rem 1.5rem 1.5rem;
     }
     .serviceCard__img{
-        width: 80%;
         margin-block: 2.3rem 2.5rem;
     }
     .serviceCard__desc,
@@ -110,18 +128,71 @@ section.services{
 
 @media screen and (max-width: 768px) {
     section.services{
-        display: flex;
         flex-direction: column;
         gap: 3.2rem;
         padding-left: unset;
         margin-block: 10rem;
     }
 
+    aside.servicesNav{
+        width: 100%;
+        min-width: unset;
+        padding: 0.4rem 1.5rem;
+        justify-content: space-between; 
+        gap: 1.2rem;
+        background: var(--color-mobile-nav); 
+        border-radius: 1.8rem;
+    }
+
+    .servicesNav .swiper-button-prev,
+    .servicesNav .swiper-button-next{
+        display: flex;
+    }
+
+    .servicesNav .swiper-pagination{    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(2.8rem, 1fr));
+        justify-items: center;
+        gap: 0.6rem;
+        width: 100%;
+    }
+    .servicesNav .swiper-pagination-bullet{
+        color: var(--color-black);
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        background: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: unset !important;
+    }
+    .servicesNav .swiper-pagination-bullet-active{
+        color: var(--color-white);
+        background: var(--color-orange);
+    }
+
+    .serviceCard{
+        padding: 5rem 1.2rem 4rem;
+    }
+    
     .services_content{
         background: var(--gradient);
         color: var(--color-white);
         border-radius: 1rem;
-        /* overflow: hidden; */
+    }
+    .serviceCard__img{
+        width: 100%;
+        margin-block: 3rem;
+        padding-inline: 1.5rem;
+        border-radius: unset;
+    }
+    .serviceCard__img img{
+        border-radius: 0.6rem;
+    }
+
+    .serviceCard__title{
+        text-align: center;
     }
     .serviceCard__desc,
     .serviceCard__desc *{

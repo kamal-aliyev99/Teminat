@@ -8,6 +8,10 @@ const swiper = new Swiper(".services_content", {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
     },
+    navigation: {
+        nextEl: ".servicesNav .swiper-button-next",
+        prevEl: ".servicesNav .swiper-button-prev",
+    },
 });
 
 
