@@ -7,7 +7,7 @@
   --color-white: #fff;
   --color-middle-grey: #f2eeee;
   --color-black: #201e1e;
-  --color-brown: #2E2A2A;
+  --color-brown: #2e2a2a;
   --color-lightestgrey: #f9f6f6;
   --color-mobile-nav: rgba(245, 240, 240, 0.98);
   --color-white-light-opacity: rgba(255, 255, 255, 0.5);
@@ -20,7 +20,7 @@
   width: 95%;
   height: 100%; /* remove */
   max-width: 124rem;
-  margin: 0 auto;   /* change with the following */
+  margin: 0 auto; /* change with the following */
   /* margin-inline: auto; */
 }
 
@@ -122,22 +122,23 @@ footer .footer_subscribe h2 {
 
 footer .footer_subscribe p {
   color: var(--color-white);
+  opacity: 0.57;
   font-size: 1.5rem;
 }
 
 footer .footer_subscribe .input_box {
   display: flex;
   gap: 2.4rem;
+  max-width: 45rem;
 }
 
 footer .footer_subscribe .input_box input {
   padding: 1.3rem 0 1.3rem 1.3rem;
-  width: 30rem;
-  max-width: 30rem;
   border: 1px solid var(--color-white-light-opacity);
   border-radius: 0.8rem;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
   font-size: 1.4rem;
+  flex: 4;
 }
 
 footer .footer_subscribe .input_box button {
@@ -146,6 +147,7 @@ footer .footer_subscribe .input_box button {
   padding: 1.3rem 2.5rem;
   border-radius: 0.5rem;
   font-size: 1.4rem;
+  flex: 1;
 }
 
 footer .footer_nav {
@@ -226,6 +228,27 @@ footer .footer_copyright p {
   header nav ul.nav_menu {
     gap: 3.2rem;
   }
+  footer .container {
+    flex-direction: column;
+    gap: 7rem;
+  }
+
+  footer .footer_subscribe {
+    align-items: center;
+  }
+
+  footer .footer_nav {
+    justify-content: center;
+    gap: 6.1rem;
+  }
+
+  footer .footer_map img {
+    max-height: 23.8rem;
+  }
+
+  footer .footer_copyright .container {
+    flex-direction: row;
+  }
 }
 
 @media screen and (max-width: 765px) {
@@ -281,12 +304,24 @@ footer .footer_copyright p {
   }
 }
 
+@media screen and (max-width: 600px){
+  footer .footer_nav {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 375px) {
   header {
     margin-bottom: 5.6rem;
   }
   header nav:nth-child(1) {
     padding: 1.35rem 0.9rem;
+  }
+  footer .footer_copyright .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.8rem;
   }
 }
 
