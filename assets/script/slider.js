@@ -14,6 +14,34 @@ const swiper = new Swiper(".services_content", {
     },
 });
 
-
+let testimonialsSwiper = new Swiper(".testimonials_swiper", {
+  slidesPerView: 4,
+  spaceBetween: 50,
+  loop: true,
+  navigation: {
+    nextEl: ".next_btn",
+    prevEl: ".prev_btn",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    536: {
+      slidesPerView: 1,
+    },
+    600: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    992: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 2,
+    },
+  },
+});
 
 
