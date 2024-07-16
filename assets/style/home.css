@@ -338,9 +338,13 @@
     margin-bottom: 14rem;
   }
   .services_block {
+    padding: 1rem;
     flex-wrap: inherit;
     overflow-x: scroll;
     justify-content: flex-start;
+  }
+  .services_block::-webkit-scrollbar {
+    display: none;
   }
   .services_item {
     flex-shrink: 0;
