@@ -1,3 +1,5 @@
+/* blog section */
+
 header {
   margin-bottom: 9.2rem;
 }
@@ -102,6 +104,11 @@ header {
   font-weight: 500;
   letter-spacing: 0.5px;
   opacity: 0.49;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .page_slider {
@@ -135,4 +142,21 @@ header {
   border-radius: 0.2rem;
   color: var(--color-white);
   background: var(--color-orange);
+}
+
+/* media query for blog section */
+
+@media screen and (max-width: 1086px) {
+  .blog_block {
+    max-width: 68.1rem;
+  }
+}
+
+@media screen and (max-width: 706px) {
+  header {
+    margin-bottom: 5.6rem;
+  }
+  .blog_block {
+    max-width: 31rem;
+  }
 }
