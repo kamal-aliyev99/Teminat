@@ -130,7 +130,6 @@ footer .footer_subscribe p {
 footer .footer_subscribe .input_box {
   display: flex;
   gap: 2.4rem;
-  max-width: 45rem;
 }
 
 footer .footer_subscribe .input_box input {
@@ -139,7 +138,6 @@ footer .footer_subscribe .input_box input {
   border-radius: 0.8rem;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
   font-size: 1.4rem;
-  flex: 4;
 }
 
 footer .footer_subscribe .input_box button {
@@ -148,7 +146,6 @@ footer .footer_subscribe .input_box button {
   padding: 1.3rem 2.5rem;
   border-radius: 0.5rem;
   font-size: 1.4rem;
-  flex: 1;
 }
 
 footer .footer_nav {
@@ -251,11 +248,6 @@ footer .footer_copyright p {
   color: var(--color-darker);
   font-size: 2.2rem;
 }
-
-/* .testimonials .testimonial_content .testimonials_swiper .swiper-wrapper{
-  display: flex;
-  justify-content: space-between;
-} */
 
 .testimonials .testimonial_card {
   border-top: 1px solid var(--color-white);

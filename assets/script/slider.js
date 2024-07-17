@@ -26,21 +26,21 @@ let testimonialsSwiper = new Swiper(".testimonials_swiper", {
     0: {
       slidesPerView: 1,
     },
-    536: {
-      slidesPerView: 1,
-    },
-    600: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 1,
-    },
-    992: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 2,
-    },
+    // 536: {
+    //   slidesPerView: 1,
+    // },
+    // 600: {
+    //   slidesPerView: 1,
+    // },
+    // 768: {
+    //   slidesPerView: 1,
+    // },
+    // 992: {
+    //   slidesPerView: 2,
+    // },
+    // 1024: {
+    //   slidesPerView: 2,
+    // },
   },
 });
 

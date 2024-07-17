@@ -1,0 +1,38 @@
+.about {
+  padding: 12rem 0 6rem 0;
+}
+
+.about .container {
+  position: relative;
+}
+
+.about .about-content {
+  max-width: 77rem;
+  padding: 12rem 5.5rem;
+  background: var(--gradient);
+  display: flex;
+  flex-direction: column;
+  gap: 6.2rem;
+}
+
+.about .about-content h2 {
+  font-size: 3.6rem;
+  color: var(--color-white);
+}
+
+.about .about-content p {
+  max-width: 57rem;
+  color: var(--color-white);
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+.about .about_video {
+  max-width: 57rem;
+  height: 48rem;
+  max-height: 48rem;
+  position: absolute;
+  right: 0;
+  top: 13.4rem;
+}
