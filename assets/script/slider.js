@@ -15,32 +15,33 @@ const swiper = new Swiper(".services_content", {
 });
 
 let testimonialsSwiper = new Swiper(".testimonials_swiper", {
-  slidesPerView: 4,
+  slidesPerView: 2,
   spaceBetween: 50,
   loop: true,
   navigation: {
-    nextEl: ".next_btn",
-    prevEl: ".prev_btn",
+    nextEl: ".prev_testimonial",
+    prevEl: ".next_testimonial",
   },
   breakpoints: {
     0: {
       slidesPerView: 1,
     },
-    // 536: {
-    //   slidesPerView: 1,
-    // },
-    // 600: {
-    //   slidesPerView: 1,
-    // },
-    // 768: {
-    //   slidesPerView: 1,
-    // },
-    // 992: {
-    //   slidesPerView: 2,
-    // },
-    // 1024: {
-    //   slidesPerView: 2,
-    // },
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
   },
 });
 

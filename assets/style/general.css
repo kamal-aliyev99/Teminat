@@ -216,6 +216,11 @@ footer .footer_copyright p {
 .testimonials .container {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+}
+
+.testimonials .container > div {
+  flex: 1;
 }
 
 .testimonials .testimonials_heading {
@@ -231,13 +236,13 @@ footer .footer_copyright p {
   font-weight: 400;
 }
 
-.testimonials .testimonials_heading .slider_nav {
+.testimonials .slider_nav {
   display: flex;
   gap: 0.8rem;
 }
 
-.testimonials .testimonials_heading .slider_nav .next_btn,
-.testimonials .testimonials_heading .slider_nav .prev_btn {
+.testimonials .slider_nav .next_testimonial,
+.testimonials .slider_nav .prev_testimonial {
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
@@ -287,15 +292,15 @@ footer .footer_copyright p {
   letter-spacing: 0.1px;
 }
 
-.testimonials .testimonial_card .card_footer{
+.testimonials .testimonial_card .card_footer {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.testimonials .testimonial_card .card_footer img{
-   width: 4.3rem;
-   height: 4.3rem;
+.testimonials .testimonial_card .card_footer img {
+  width: 4.3rem;
+  height: 4.3rem;
 }
 
 .testimonials .testimonial_card .card_footer .card_info {
@@ -304,19 +309,21 @@ footer .footer_copyright p {
   gap: 1rem;
 }
 
-.testimonials .testimonial_card .card_footer .card_info p:nth-child(1){
+.testimonials .testimonial_card .card_footer .card_info p:nth-child(1) {
   color: var(--color-white);
   font-size: 13px;
   font-weight: normal;
 }
 
-.testimonials .testimonial_card .card_footer .card_info p:nth-child(2){
+.testimonials .testimonial_card .card_footer .card_info p:nth-child(2) {
   color: var(--color-white);
   font-size: 14px;
   font-weight: 400;
 }
 
-/*testimonials css ended*/
+.testimonials .testimonial-footer {
+  display: none !important;
+}
 
 /*media queries*/
 
@@ -357,6 +364,30 @@ footer .footer_copyright p {
 
   footer .footer_copyright .container {
     flex-direction: row;
+  }
+
+  .testimonials .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonials .testimonials_heading {
+    padding: 4.3rem 0 7rem 0;
+  }
+
+  .testimonials .testimonials_heading .slider_nav {
+    display: none;
+  }
+
+  .testimonials .testimonials_heading h2 {
+    font-size: 2.4rem;
+    font-weight: normal;
+  }
+
+  .testimonials .testimonials-footer .slider_nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 4.2rem;
   }
 }
 
@@ -416,6 +447,13 @@ footer .footer_copyright p {
 @media screen and (max-width: 600px) {
   footer .footer_nav {
     display: none;
+  }
+
+  .testimonials .testimonial_card {
+    border-top: none;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
