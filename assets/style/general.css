@@ -32,6 +32,17 @@ header {
   margin-bottom: 13.3rem;
 }
 
+header nav{
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+header .container{
+  display: flex;
+  justify-content: center;
+}
+
 header nav:nth-child(1) {
   max-width: 91.4rem;
   height: 7.3rem;
@@ -47,6 +58,8 @@ header nav:nth-child(1) {
     0px 24px 10px 0px rgba(0, 0, 0, 0.01), 0px 13px 8px 0px rgba(0, 0, 0, 0.03),
     0px 6px 6px 0px rgba(0, 0, 0, 0.04), 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
 }
+
+
 
 header nav a {
   display: block;
