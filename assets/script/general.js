@@ -1,6 +1,8 @@
 const openMobNavBtn = document.getElementById("openMobNav");
 const mobileNavbar = document.getElementById("mobileNav");
 const scroll_top = document.querySelector("#scroll_top");
+const fileInput = document.querySelector("#file");
+const fileLabel = document.querySelector(".custom_file_upload");
 
 function openMobileNav() {
   mobileNavbar.classList.toggle("active_mobile_nav");
@@ -23,4 +25,9 @@ scroll_top.addEventListener("click", (event) => {
     left: 0,
     behavior: "smooth",
   });
+});
+
+fileInput.addEventListener("change", function () {
+  const fileName = fileInput.value.split("\\").pop();
+  fileLabel.textContent = fileName || "Faylı endir";
 });

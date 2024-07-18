@@ -1,0 +1,7 @@
+header nav ul.nav_menu li:nth-child(5) a {
+  color: var(--color-orange);
+}
+
+.contact {
+  padding-top: 0;
+}

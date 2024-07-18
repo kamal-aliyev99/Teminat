@@ -4,6 +4,10 @@ header {
   margin-bottom: 9.2rem;
 }
 
+header nav ul.nav_menu li:nth-child(4) a {
+  color: var(--color-orange);
+}
+
 .blog_block {
   max-width: 103.2rem;
   margin-inline: auto;

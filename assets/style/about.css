@@ -1,3 +1,7 @@
+header nav ul.nav_menu li:nth-child(1) a {
+  color: var(--color-orange);
+}
+
 .about {
   padding-bottom: 10.5rem;
 }
