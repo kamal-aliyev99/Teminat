@@ -47,6 +47,21 @@ header nav ul.nav_menu li:nth-child(1) a {
 }
 
 /*media queries*/
+@media screen and (max-width: 1280px) {
+  .about .about-content {
+    max-width: 100%;
+  }
+
+  .about .about_video {
+    position: static;
+    max-width: 100%;
+  }
+
+  .about .about-content p {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .about {
     padding-bottom: 6.7rem;
