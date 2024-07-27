@@ -1,5 +1,5 @@
 header {
-  margin-bottom: 2.6rem;
+  margin-bottom: 3.5rem;
 }
 
 .products_menu {
@@ -175,12 +175,23 @@ header {
 
 @media screen and (max-width: 992px) {
   .category {
+    padding: 0.9rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-bottom: 3.6rem;
+  }
+
+  .category::-webkit-scrollbar {
     display: none;
   }
   .products_item {
     flex-wrap: wrap;
     max-height: max-content;
     gap: 3.2rem;
+  }
+  .products_item:hover {
+    max-height: max-content;
   }
   .products_img {
     width: 49.2rem;
@@ -211,17 +222,6 @@ header {
 }
 
 @media screen and (max-width: 550px) {
-  .category {
-    padding: 0.9rem 0;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    margin-bottom: 3.6rem;
-  }
-
-  .category::-webkit-scrollbar {
-    display: none;
-  }
   .category a {
     font-size: 1.6rem;
   }
