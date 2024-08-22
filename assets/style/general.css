@@ -15,6 +15,7 @@
   --gradient: linear-gradient(123deg, #212223 18.29%, #ff6000 403.34%);
   --video-background: rgba(126, 86, 50, 0.42);
   --color-darker: #212223;
+  --color-transparent: transparent
 }
 
 .container {
@@ -29,7 +30,7 @@
 header {
   height: 10.3rem;
   padding-top: 3rem;
-  margin-bottom: 13.3rem;
+  margin-bottom: 10.3rem;
 }
 
 header nav {
@@ -154,14 +155,29 @@ footer .footer_subscribe .input_box input {
   border-radius: 0.8rem;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
   font-size: 1.4rem;
+  color: var(--color-white);
+  transition: 0.3s ease;
+}
+
+footer .footer_subscribe .input_box input:focus {
+  border: 1px solid var(--color-white);
+  transition: 0.3s ease;
 }
 
 footer .footer_subscribe .input_box button {
   color: var(--color-white);
   background-color: var(--color-orange);
+   border: 1px solid var(--color-orange);
   padding: 1.3rem 2.5rem;
   border-radius: 0.5rem;
   font-size: 1.4rem;
+  transition: 0.5s ease;
+}
+
+footer .footer_subscribe .input_box button:hover {
+  color: var(--color-orange);
+  border: 1px solid var(--color-orange);
+  background-color: var(--color-transparent);
 }
 
 footer .footer_nav {
@@ -207,8 +223,10 @@ footer .footer_nav ul .footer_social_links button {
   color: var(--color-grey);
 }
 
-footer .footer_map img {
+footer .footer_map iframe {
   border-radius: 1.5rem;
+  max-width: 47rem;
+  height: 31rem;
 }
 
 footer .footer_copyright {
@@ -368,6 +386,7 @@ footer .footer_copyright p {
   header nav ul.nav_menu {
     gap: 3.2rem;
   }
+
   footer .container {
     flex-direction: column;
     gap: 7rem;
@@ -380,10 +399,12 @@ footer .footer_copyright p {
   footer .footer_nav {
     justify-content: center;
     gap: 6.1rem;
-  }
+  } 
 
-  footer .footer_map img {
+  footer .footer_map iframe {
     max-height: 23.8rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   footer .footer_copyright .container {
@@ -738,16 +759,10 @@ label {
 #note {
   border-radius: 0.4rem;
   border: 1px solid #bab8b8;
-  background: #fdc898;
   padding: 2rem 1.7rem;
   width: 30.4rem;
   height: 40.2rem;
-  font-size: 1.3rem;
-  color: var(--color-white);
-}
-
-#note::placeholder {
-  color: var(--color-white);
+  font-size: 1.6rem;
 }
 
 form button {
