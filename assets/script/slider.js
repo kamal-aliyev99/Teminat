@@ -15,7 +15,7 @@ const swiper = new Swiper(".services_content", {
 });
 
 let testimonialsSwiper = new Swiper(".testimonials_swiper", {
-  slidesPerView: 2,
+  slidesPerView: "auto",
   spaceBetween: 50,
   loop: true,
   navigation: {
@@ -26,23 +26,16 @@ let testimonialsSwiper = new Swiper(".testimonials_swiper", {
     0: {
       slidesPerView: 1,
     },
-    375: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
     600: {
       slidesPerView: 2,
-      spaceBetween: 10,
+      spaceBetween: 25,
     },
     992: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    1024: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
       spaceBetween: 50,
-    },
+    }
   },
+
 });
 
 let blogPageSwiper = new Swiper(".mySwiper", {
